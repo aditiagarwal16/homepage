@@ -1,0 +1,26 @@
+/* src/components/ImagePlaceholder.css */
+.image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1600px;
+  }
+  
+  .image-box {
+    width: 100%;
+    padding-bottom: 25%; /* This sets a 4:1 aspect ratio */
+    position: relative;
+    border: 1px solid #000;
+  }
+  
+  .image-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  

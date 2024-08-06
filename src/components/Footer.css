@@ -1,0 +1,75 @@
+/* src/components/Footer.css */
+.footer {
+    background-color: #004d4d;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .subscribe-section {
+    background-color: #f0f0f0;
+    color: #000;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .subscribe-section input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .subscribe-section button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ccc;
+    cursor: pointer;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+  }
+  
+  .footer-links h4 {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 5px;
+  }
+  
+  .stay-connected ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .stay-connected i {
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #fff;
+    padding-top: 10px;
+  }
+  
+  .footer-bottom ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  

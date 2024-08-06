@@ -1,0 +1,21 @@
+/* src/components/FeaturedArticles.css */
+.featured-section {
+    text-align: center;
+    margin: 20px auto;
+  }
+  
+  .featured-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .featured-section .ui.card {
+    border: 1px solid #000;
+  }
+  
+  .featured-section .see-all-articles {
+    margin-top: 20px;
+    background-color: #ccc;
+    color: #000;
+  }
+  
