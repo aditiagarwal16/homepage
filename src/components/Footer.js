@@ -1,15 +1,46 @@
-// src/components/Footer.js
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 import './Footer.css';
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubscribe = async () => {
+    if (!email) {
+      setMessage('Please enter a valid email.');
+      return;
+    }
+
+    try {
+      // Send email to the backend
+      const response = await axios.post('http://localhost:5002/subscribe', { email });
+
+      if (response.status === 200) {
+        setMessage('Subscription successful! Check your inbox for the welcome email.');
+        setEmail(''); // Clear the input after success
+      }
+    } catch (error) {
+      setMessage('Failed to subscribe. Please try again later.');
+      console.error('Subscription error:', error);
+    }
+  };
+
   return (
     <div className="footer">
       <div className="subscribe-section">
         <span>SIGN UP FOR OUR DAILY INSIDER</span>
-        <input type="email" placeholder="Enter your email" />
-        <button>Subscribe</button>
+        <input
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)} // Update the email state
+        />
+        <button onClick={handleSubscribe}>Subscribe</button>
+        {message && <p>{message}</p>} {/* Display messages to the user */}
       </div>
+
+      {/* Rest of the footer content */}
       <div className="footer-links">
         <div className="explore">
           <h4>Explore</h4>
