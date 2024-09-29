@@ -1,0 +1,70 @@
+/* src/components/Premium.css */
+.premium-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #f4f4f4; /* Keep the background color neutral */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .premium-container h1,
+  .premium-container h2 {
+    margin-bottom: 10px;
+  }
+  
+  .feature {
+    margin: 20px 0;
+  }
+  
+  .customization-option {
+    margin: 10px 0;
+  }
+  
+  .input-banner {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  .color-picker {
+    width: 50px;
+    height: 30px;
+    margin-left: 10px;
+  }
+  
+  .banner-message {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Simple analytics dashboard */
+  .dashboard {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .stat {
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat h3 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .stat p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #007bff;
+  }
+  

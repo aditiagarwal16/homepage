@@ -1,23 +1,26 @@
-/* src/components/Header.css */
+/* Header.css */
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
-    background-color: #f0f0f0;
-  }
-  
-  .header .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .header .search-bar {
-    flex: 1;
-    margin: 0 20px;
-  }
-  
-  .header .buttons button {
-    margin-left: 10px;
-  }
-  
+  display: flex;
+  justify-content: space-between; /* Ensure navbar contents are spaced out */
+  align-items: center; /* Align items in the center vertically */
+  padding: 10px 20px;
+  background-color: #fff;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px; /* Adds space between buttons */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
