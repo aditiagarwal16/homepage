@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import './Footer.css';
 
 const Footer = () => {
@@ -14,15 +13,20 @@ const Footer = () => {
 
     try {
       // Send email to the backend
-      const response = await axios.post('http://localhost:5002/subscribe', { email });
+      const response = await fetch('http://localhost:5002/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
 
-      if (response.status === 200) {
+      if (response.ok) {
         setMessage('Subscription successful! Check your inbox for the welcome email.');
         setEmail(''); // Clear the input after success
+      } else {
+        setMessage('Failed to subscribe. Please try again later.');
       }
     } catch (error) {
       setMessage('Failed to subscribe. Please try again later.');
-      console.error('Subscription error:', error);
     }
   };
 
@@ -40,7 +44,6 @@ const Footer = () => {
         {message && <p>{message}</p>} {/* Display messages to the user */}
       </div>
 
-      {/* Rest of the footer content */}
       <div className="footer-links">
         <div className="explore">
           <h4>Explore</h4>
@@ -68,6 +71,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+
       <div className="footer-bottom">
         <span>DEV@Deakin 2022</span>
         <ul>
